@@ -1,0 +1,30 @@
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.pdb
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll.config
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.pdb
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.dll
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.xml
+C:\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.dll
+C:\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll.config
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\Entidades.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.xml
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Entidades\obj\Debug\Entidades.pdb

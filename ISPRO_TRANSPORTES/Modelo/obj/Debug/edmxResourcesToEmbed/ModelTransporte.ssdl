@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TRANSPORTEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ABONOCXP">
+    <Key>
+      <PropertyRef Name="IDABONO" />
+      <PropertyRef Name="IDCUENTA" />
+    </Key>
+    <Property Name="IDABONO" Type="int" Nullable="false" />
+    <Property Name="IDCUENTA" Type="bigint" Nullable="false" />
+    <Property Name="IMPORTE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="DOCUMENTO" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CAMION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PLACA" Type="varchar" MaxLength="50" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" />
+    <Property Name="MODELO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="bit" />
+    <Property Name="PILOTO" Type="int" />
+  </EntityType>
+  <EntityType Name="CATEGORIA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar" MaxLength="50" />
+    <Property Name="NIT" Type="varchar" MaxLength="50" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="COMPRA">
+    <Key>
+      <PropertyRef Name="NOCOMPRA" />
+    </Key>
+    <Property Name="NOCOMPRA" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PROVEEDOR" Type="int" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FORMAPAGO" Type="smallint" />
+    <Property Name="FECHAPAGO" Type="date" />
+    <Property Name="NOFACTURA" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="COMPRA2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" Nullable="false" />
+    <Property Name="NOFACTURA" Type="varchar" MaxLength="50" />
+    <Property Name="TIPODOCUMENTO" Type="varchar" MaxLength="200" />
+    <Property Name="NIT" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDOR" Type="varchar" MaxLength="200" />
+    <Property Name="CUENTACONTABLE" Type="varchar" MaxLength="200" />
+    <Property Name="GALONAJE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IDP" Type="varchar" MaxLength="50" />
+    <Property Name="TOTALFACTURA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIONETO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="COMPRADETA">
+    <Key>
+      <PropertyRef Name="NODETALLE" />
+      <PropertyRef Name="IDCOMPRA" />
+    </Key>
+    <Property Name="NODETALLE" Type="int" Nullable="false" />
+    <Property Name="IDCOMPRA" Type="bigint" Nullable="false" />
+    <Property Name="IDINSUMO" Type="int" />
+    <Property Name="PRECIO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CANTIDAD" Type="int" />
+  </EntityType>
+  <EntityType Name="CUENTAXPAGAR">
+    <Key>
+      <PropertyRef Name="IDCUENTA" />
+    </Key>
+    <Property Name="IDCUENTA" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDCOMPRA" Type="bigint" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FECHAINICIO" Type="date" />
+    <Property Name="FECHALIMITE" Type="date" />
+    <Property Name="SALDO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="FORMAPAGO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="INSUMO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="COSTO" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRECIO" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CATEGORIA" Type="smallint" />
+    <Property Name="EXISTENCIA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="PAGOAPILOTO">
+    <Key>
+      <PropertyRef Name="IDPAGO" />
+    </Key>
+    <Property Name="IDPAGO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHAREGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="NODOCUMENTO" Type="varchar" MaxLength="50" />
+    <Property Name="DOCUMENTO" Type="varchar" MaxLength="300" />
+    <Property Name="QUINCENA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VIATICOS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ENTRADAS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PARQUEO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DESCARGA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OTROS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PLACA" Type="varchar" MaxLength="50" />
+    <Property Name="PILOTO" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="PILOTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar" MaxLength="15" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="15" />
+    <Property Name="DOMICILIO" Type="varchar" MaxLength="150" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="PRELIQUIDACION">
+    <Key>
+      <PropertyRef Name="PRELIQUIDACION" />
+    </Key>
+    <Property Name="PRELIQUIDACION" Type="bigint" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="FACTURA" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="PROVEEDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NIT" Type="varchar" MaxLength="15" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="150" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="150" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACTO" Type="varchar" MaxLength="100" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="SALIDAINSUMO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="SERVICIO" Type="int" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="SALIDAINSUMODETA">
+    <Key>
+      <PropertyRef Name="NODETALLE" />
+      <PropertyRef Name="IDSALIDAINSUMO" />
+    </Key>
+    <Property Name="NODETALLE" Type="int" Nullable="false" />
+    <Property Name="IDSALIDAINSUMO" Type="int" Nullable="false" />
+    <Property Name="IDINSUMO" Type="int" />
+    <Property Name="PRECIO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CANTIDAD" Type="int" />
+  </EntityType>
+  <EntityType Name="SERVICIO">
+    <Key>
+      <PropertyRef Name="IDSERVICIO" />
+    </Key>
+    <Property Name="IDSERVICIO" Type="int" Nullable="false" />
+    <Property Name="CAMION" Type="int" />
+    <Property Name="FECHA" Type="date" />
+    <Property Name="COSTO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIO" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TIPOUSUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar" MaxLength="50" />
+    <Property Name="CLAVE" Type="varchar" MaxLength="100" />
+    <Property Name="TIPO" Type="smallint" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="VALECOMBUSTIBLE">
+    <Key>
+      <PropertyRef Name="CORRELATIVO" />
+    </Key>
+    <Property Name="CORRELATIVO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOVALE" Type="bigint" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="MONTO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VIAJE" Type="bigint" />
+    <Property Name="LOCALIDAD" Type="bit" />
+  </EntityType>
+  <EntityType Name="VENTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="FACTURA" Type="varchar" MaxLength="50" />
+    <Property Name="TIPODOCUMENTO" Type="varchar" MaxLength="150" />
+    <Property Name="NIT" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDOR" Type="varchar" MaxLength="250" />
+    <Property Name="CUENTACONTABLE" Type="varchar" MaxLength="150" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIONETO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RETENCION" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="VIAJE">
+    <Key>
+      <PropertyRef Name="CORRELATIVO" />
+    </Key>
+    <Property Name="CORRELATIVO" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOVIAJE" Type="varchar" MaxLength="50" />
+    <Property Name="FOLIO" Type="varchar" MaxLength="50" />
+    <Property Name="FECHAREGISTRO" Type="datetime" Nullable="false" />
+    <Property Name="DESTINO" Type="varchar" MaxLength="200" />
+    <Property Name="ORIGEN" Type="varchar" MaxLength="200" />
+    <Property Name="PILOTO" Type="int" />
+    <Property Name="CAMION" Type="int" />
+    <Property Name="FECHAENTREGA" Type="datetime" />
+    <Property Name="PAGOPILOTO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CANTDIESEL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PRECIOVIAJE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="REGISTRADO" Type="bit" />
+    <Property Name="DESPACHADO" Type="bit" />
+    <Property Name="PAGADO" Type="bit" />
+    <Property Name="FACTURADO" Type="bit" />
+    <Property Name="USUARIO" Type="int" />
+    <Property Name="ESTADO" Type="bit" />
+    <Property Name="TNMOVIDAS" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="KILOMETRAJE" Type="int" />
+    <Property Name="PRELIQUIDACION" Type="bigint" />
+    <Property Name="NOPAGO" Type="bigint" />
+    <Property Name="CLIENTE" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <Association Name="FK_ABONOCXP_CUENTAXPAGAR">
+    <End Role="CUENTAXPAGAR" Type="Self.CUENTAXPAGAR" Multiplicity="1" />
+    <End Role="ABONOCXP" Type="Self.ABONOCXP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUENTAXPAGAR">
+        <PropertyRef Name="IDCUENTA" />
+      </Principal>
+      <Dependent Role="ABONOCXP">
+        <PropertyRef Name="IDCUENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CAMION_PILOTO">
+    <End Role="PILOTO" Type="Self.PILOTO" Multiplicity="0..1" />
+    <End Role="CAMION" Type="Self.CAMION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PILOTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CAMION">
+        <PropertyRef Name="PILOTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPRA_FORMAPAGO">
+    <End Role="FORMAPAGO" Type="Self.FORMAPAGO" Multiplicity="0..1" />
+    <End Role="COMPRA" Type="Self.COMPRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMAPAGO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPRA">
+        <PropertyRef Name="FORMAPAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPRA_PROVEEDOR">
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="0..1" />
+    <End Role="COMPRA" Type="Self.COMPRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDOR">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPRA">
+        <PropertyRef Name="PROVEEDOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPRADETA_COMPRA">
+    <End Role="COMPRA" Type="Self.COMPRA" Multiplicity="1" />
+    <End Role="COMPRADETA" Type="Self.COMPRADETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPRA">
+        <PropertyRef Name="NOCOMPRA" />
+      </Principal>
+      <Dependent Role="COMPRADETA">
+        <PropertyRef Name="IDCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPRADETA_INSUMO">
+    <End Role="INSUMO" Type="Self.INSUMO" Multiplicity="0..1" />
+    <End Role="COMPRADETA" Type="Self.COMPRADETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSUMO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPRADETA">
+        <PropertyRef Name="IDINSUMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUENTAXPAGAR_COMPRA">
+    <End Role="COMPRA" Type="Self.COMPRA" Multiplicity="0..1" />
+    <End Role="CUENTAXPAGAR" Type="Self.CUENTAXPAGAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPRA">
+        <PropertyRef Name="NOCOMPRA" />
+      </Principal>
+      <Dependent Role="CUENTAXPAGAR">
+        <PropertyRef Name="IDCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INSUMO_CATEGORIA">
+    <End Role="CATEGORIA" Type="Self.CATEGORIA" Multiplicity="0..1" />
+    <End Role="INSUMO" Type="Self.INSUMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INSUMO">
+        <PropertyRef Name="CATEGORIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SALIDAINSUMO_SERVICIO">
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="0..1" />
+    <End Role="SALIDAINSUMO" Type="Self.SALIDAINSUMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICIO">
+        <PropertyRef Name="IDSERVICIO" />
+      </Principal>
+      <Dependent Role="SALIDAINSUMO">
+        <PropertyRef Name="SERVICIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SALIDAINSUMODETA_INSUMO">
+    <End Role="INSUMO" Type="Self.INSUMO" Multiplicity="0..1" />
+    <End Role="SALIDAINSUMODETA" Type="Self.SALIDAINSUMODETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INSUMO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SALIDAINSUMODETA">
+        <PropertyRef Name="IDINSUMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SALIDAINSUMODETA_SALIDAINSUMO">
+    <End Role="SALIDAINSUMO" Type="Self.SALIDAINSUMO" Multiplicity="1" />
+    <End Role="SALIDAINSUMODETA" Type="Self.SALIDAINSUMODETA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SALIDAINSUMO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SALIDAINSUMODETA">
+        <PropertyRef Name="IDSALIDAINSUMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SERVICIO_CAMION">
+    <End Role="CAMION" Type="Self.CAMION" Multiplicity="0..1" />
+    <End Role="SERVICIO" Type="Self.SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SERVICIO">
+        <PropertyRef Name="CAMION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIO_TIPOUSUARIO">
+    <End Role="TIPOUSUARIO" Type="Self.TIPOUSUARIO" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOUSUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="TIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VALECOMBUSTIBLE_VIAJE">
+    <End Role="VIAJE" Type="Self.VIAJE" Multiplicity="0..1" />
+    <End Role="VALECOMBUSTIBLE" Type="Self.VALECOMBUSTIBLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIAJE">
+        <PropertyRef Name="CORRELATIVO" />
+      </Principal>
+      <Dependent Role="VALECOMBUSTIBLE">
+        <PropertyRef Name="VIAJE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIAJE_CAMION">
+    <End Role="CAMION" Type="Self.CAMION" Multiplicity="0..1" />
+    <End Role="VIAJE" Type="Self.VIAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAMION">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VIAJE">
+        <PropertyRef Name="CAMION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIAJE_PILOTO">
+    <End Role="PILOTO" Type="Self.PILOTO" Multiplicity="0..1" />
+    <End Role="VIAJE" Type="Self.VIAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PILOTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VIAJE">
+        <PropertyRef Name="PILOTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIAJE_PRELIQUIDACION1">
+    <End Role="PRELIQUIDACION" Type="Self.PRELIQUIDACION" Multiplicity="0..1" />
+    <End Role="VIAJE" Type="Self.VIAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRELIQUIDACION">
+        <PropertyRef Name="PRELIQUIDACION" />
+      </Principal>
+      <Dependent Role="VIAJE">
+        <PropertyRef Name="PRELIQUIDACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VIAJE_USUARIO">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="VIAJE" Type="Self.VIAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VIAJE">
+        <PropertyRef Name="USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TRANSPORTEModelStoreContainer">
+    <EntitySet Name="ABONOCXP" EntityType="Self.ABONOCXP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAMION" EntityType="Self.CAMION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORIA" EntityType="Self.CATEGORIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPRA" EntityType="Self.COMPRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPRA2" EntityType="Self.COMPRA2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPRADETA" EntityType="Self.COMPRADETA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUENTAXPAGAR" EntityType="Self.CUENTAXPAGAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FORMAPAGO" EntityType="Self.FORMAPAGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INSUMO" EntityType="Self.INSUMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGOAPILOTO" EntityType="Self.PAGOAPILOTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PILOTO" EntityType="Self.PILOTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRELIQUIDACION" EntityType="Self.PRELIQUIDACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVEEDOR" EntityType="Self.PROVEEDOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALIDAINSUMO" EntityType="Self.SALIDAINSUMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SALIDAINSUMODETA" EntityType="Self.SALIDAINSUMODETA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVICIO" EntityType="Self.SERVICIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOUSUARIO" EntityType="Self.TIPOUSUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VALECOMBUSTIBLE" EntityType="Self.VALECOMBUSTIBLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTA" EntityType="Self.VENTA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VIAJE" EntityType="Self.VIAJE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ABONOCXP_CUENTAXPAGAR" Association="Self.FK_ABONOCXP_CUENTAXPAGAR">
+      <End Role="CUENTAXPAGAR" EntitySet="CUENTAXPAGAR" />
+      <End Role="ABONOCXP" EntitySet="ABONOCXP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CAMION_PILOTO" Association="Self.FK_CAMION_PILOTO">
+      <End Role="PILOTO" EntitySet="PILOTO" />
+      <End Role="CAMION" EntitySet="CAMION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPRA_FORMAPAGO" Association="Self.FK_COMPRA_FORMAPAGO">
+      <End Role="FORMAPAGO" EntitySet="FORMAPAGO" />
+      <End Role="COMPRA" EntitySet="COMPRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPRA_PROVEEDOR" Association="Self.FK_COMPRA_PROVEEDOR">
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
+      <End Role="COMPRA" EntitySet="COMPRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPRADETA_COMPRA" Association="Self.FK_COMPRADETA_COMPRA">
+      <End Role="COMPRA" EntitySet="COMPRA" />
+      <End Role="COMPRADETA" EntitySet="COMPRADETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPRADETA_INSUMO" Association="Self.FK_COMPRADETA_INSUMO">
+      <End Role="INSUMO" EntitySet="INSUMO" />
+      <End Role="COMPRADETA" EntitySet="COMPRADETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUENTAXPAGAR_COMPRA" Association="Self.FK_CUENTAXPAGAR_COMPRA">
+      <End Role="COMPRA" EntitySet="COMPRA" />
+      <End Role="CUENTAXPAGAR" EntitySet="CUENTAXPAGAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INSUMO_CATEGORIA" Association="Self.FK_INSUMO_CATEGORIA">
+      <End Role="CATEGORIA" EntitySet="CATEGORIA" />
+      <End Role="INSUMO" EntitySet="INSUMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SALIDAINSUMO_SERVICIO" Association="Self.FK_SALIDAINSUMO_SERVICIO">
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+      <End Role="SALIDAINSUMO" EntitySet="SALIDAINSUMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SALIDAINSUMODETA_INSUMO" Association="Self.FK_SALIDAINSUMODETA_INSUMO">
+      <End Role="INSUMO" EntitySet="INSUMO" />
+      <End Role="SALIDAINSUMODETA" EntitySet="SALIDAINSUMODETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SALIDAINSUMODETA_SALIDAINSUMO" Association="Self.FK_SALIDAINSUMODETA_SALIDAINSUMO">
+      <End Role="SALIDAINSUMO" EntitySet="SALIDAINSUMO" />
+      <End Role="SALIDAINSUMODETA" EntitySet="SALIDAINSUMODETA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERVICIO_CAMION" Association="Self.FK_SERVICIO_CAMION">
+      <End Role="CAMION" EntitySet="CAMION" />
+      <End Role="SERVICIO" EntitySet="SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIO_TIPOUSUARIO" Association="Self.FK_USUARIO_TIPOUSUARIO">
+      <End Role="TIPOUSUARIO" EntitySet="TIPOUSUARIO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VALECOMBUSTIBLE_VIAJE" Association="Self.FK_VALECOMBUSTIBLE_VIAJE">
+      <End Role="VIAJE" EntitySet="VIAJE" />
+      <End Role="VALECOMBUSTIBLE" EntitySet="VALECOMBUSTIBLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIAJE_CAMION" Association="Self.FK_VIAJE_CAMION">
+      <End Role="CAMION" EntitySet="CAMION" />
+      <End Role="VIAJE" EntitySet="VIAJE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIAJE_PILOTO" Association="Self.FK_VIAJE_PILOTO">
+      <End Role="PILOTO" EntitySet="PILOTO" />
+      <End Role="VIAJE" EntitySet="VIAJE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIAJE_PRELIQUIDACION1" Association="Self.FK_VIAJE_PRELIQUIDACION1">
+      <End Role="PRELIQUIDACION" EntitySet="PRELIQUIDACION" />
+      <End Role="VIAJE" EntitySet="VIAJE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VIAJE_USUARIO" Association="Self.FK_VIAJE_USUARIO">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="VIAJE" EntitySet="VIAJE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

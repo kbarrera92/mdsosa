@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b6e6e0c9d644748893f74bb6ff5bbd4" Name="Diagram1">
+        <EntityTypeShape EntityType="TRANSPORTEModel.ABONOCXP" Width="1.5" PointX="16.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.CAMION" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.CATEGORIA" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.CLIENTE" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.COMPRA" Width="1.5" PointX="12" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.COMPRADETA" Width="1.5" PointX="14.25" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.CUENTAXPAGAR" Width="1.5" PointX="14.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.FORMAPAGO" Width="1.5" PointX="9.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.INSUMO" Width="1.5" PointX="7.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.PAGOAPILOTO" Width="1.5" PointX="11.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.PILOTO" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.PRELIQUIDACION" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.PROVEEDOR" Width="1.5" PointX="9.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.SALIDAINSUMO" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.SALIDAINSUMODETA" Width="1.5" PointX="9.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.SERVICIO" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.TIPOUSUARIO" Width="1.5" PointX="0.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.USUARIO" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.VALECOMBUSTIBLE" Width="1.5" PointX="7.5" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.VIAJE" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_ABONOCXP_CUENTAXPAGAR" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_CAMION_PILOTO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_SERVICIO_CAMION" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_VIAJE_CAMION" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_INSUMO_CATEGORIA" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_COMPRA_FORMAPAGO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_COMPRA_PROVEEDOR" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_COMPRADETA_COMPRA" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_CUENTAXPAGAR_COMPRA" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_COMPRADETA_INSUMO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_SALIDAINSUMODETA_INSUMO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_VIAJE_PILOTO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_VIAJE_PRELIQUIDACION1" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_SALIDAINSUMO_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_SALIDAINSUMODETA_SALIDAINSUMO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_USUARIO_TIPOUSUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_VIAJE_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="TRANSPORTEModel.FK_VALECOMBUSTIBLE_VIAJE" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.COMPRA2" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TRANSPORTEModel.VENTA" Width="1.5" PointX="14.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

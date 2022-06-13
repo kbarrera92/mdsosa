@@ -1,0 +1,42 @@
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll.config
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.pdb
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.pdb
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.pdb
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.xml
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.dll
+C:\Users\Kevin\Desktop\Proyectos\C#\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.pdb
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll.config
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.pdb
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.dll
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.dll
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.dll
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.dll
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.pdb
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.pdb
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.xml
+C:\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.xml
+C:\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+C:\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.dll
+C:\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll.config
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Logica.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Entidades.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\Modelo.pdb
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.xml
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\bin\Debug\EntityFramework.SqlServer.xml
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.csprojResolveAssemblyReference.cache
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.dll
+E:\Sistema mdsosa\ISPRO_TRANSPORTES\Logica\obj\Debug\Logica.pdb
